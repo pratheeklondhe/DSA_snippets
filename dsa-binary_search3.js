@@ -21,4 +21,4 @@ function k(arr, ele) { //O(log n)
 }
 
 let res = k([0,2,3,4,5,6,7,8,9], 00);
-console.log(res);
+console.log(res, 'dsadsad');
