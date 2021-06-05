@@ -85,10 +85,23 @@ class SinglyLinkedList {
       let i=0,temp = this.head,newNode = new Node(val);
       while(i<index - 1) {
         temp = temp.next;
+        i++;
       }
       newNode.next = temp.next;
       temp.next = newNode;
       this.length++;
+      return this;
+    }
+
+// Sets the given value at given index
+    set(index, val) {
+      if (index >= this.length) {return false;}
+      let i=0,temp=this.head;
+      while(i<index) {
+        temp = temp.next;
+        i++;
+      }
+      temp.val = val;
       return this;
     }
 }
