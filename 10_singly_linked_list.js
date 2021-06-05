@@ -104,6 +104,40 @@ class SinglyLinkedList {
       temp.val = val;
       return this;
     }
+
+// Removes a node at a given index
+    remove(index) {
+      if (index === 0){return this.unshift();};
+      if (index === this.length - 1){return this.pop();};
+      if (index >= this.length){return false;};
+      let i=0,temp=this.head;
+      while(i<index) {
+        temp = temp.next;
+        i++;
+      }
+      temp.next = temp.next.next;
+      this.length--;
+      return this;
+    }
+
+// Reverse the singly Linked List
+    reverse() {
+      // first swap head and tail
+      let current = this.head; // start from current being this.head
+      this.head = this.tail;
+      this.tail = current;
+      // Use prev and next variable for tracking
+      let prev = null, next = null;
+      // Loop through the LinkedList
+      for (let i = 0; i< this.length; i++) {
+        // Hope its self explanatory
+        next = current.next;
+        current.next = prev;
+        prev = current;
+        current = next;
+      }
+      return this;
+    }
 }
 
 let list = new SinglyLinkedList();
