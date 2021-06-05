@@ -40,6 +40,27 @@ class DoublyLinkedList {
       return this;
     }
 
+    shift() {
+      if (!this.length) { return undefined;}
+      if (this.length === 1) {
+        return this.pop();
+      }
+      this.head = this.head.next;
+      this.head.prev = null;
+      this.length--;
+      return this;
+    }
+
+    unshift(val) {
+      if (!this.length) { return this.push(val);}
+      let newNode = new Node(val);
+      this.head.prev = newNode;
+      newNode.next = this.head;
+      this.head = newNode;
+      this.length++;
+      return this;
+    }
+
 
 }
 
