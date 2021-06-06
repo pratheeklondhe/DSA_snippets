@@ -80,6 +80,38 @@ class DoublyLinkedList {
         return temp;
     }
 
+    set(index, val) {
+      let temp = this.get(index);
+      if (!temp) { return temp; };
+      temp.val = val;
+      return temp;
+    }
+
+    insert(index, val) {
+      if (index === this.length) { return this.push(val)};
+      let temp = this.get(index);
+      if (!temp) { return temp; };
+      let newNode = new Node(val);
+      newNode.next = temp;
+      newNode.prev = temp.prev;
+      temp.prev.next = newNode;
+      temp.prev = newNode;
+      this.length++;
+      return newNode;
+    }
+
+    remove(index) {
+      if(index === 0) {return this.shift()};
+      if(index === this.length - 1) {return this.pop()};
+      let temp = this.get(index);
+      if (!temp) { return temp; };
+
+      temp.prev.next = temp.next;
+      temp.next.prev = temp.prev;
+      this.length--;
+      return temp;
+    }
+
 }
 
     let list = new DoublyLinkedList();
