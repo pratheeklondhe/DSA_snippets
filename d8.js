@@ -12,7 +12,7 @@ function kk(n) {
         k += '#';
       }
     }
-    k += '\n';
+    k += (i === n-1) ? '' : '\n';
   }
   return k;
 }
