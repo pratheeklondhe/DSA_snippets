@@ -10,11 +10,11 @@ function k(n) {
     let x='';
 
     for (let j=0; j<n; j++) {
-      if(j>i) k += '#';
-      else k += ' ';
+      if(j>i) x += ' ';
+      else x += '#';
     }
 
-    console.log(k);
+    console.log(x);
     recur(i+1)
   }
 
