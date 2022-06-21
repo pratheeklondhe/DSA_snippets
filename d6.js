@@ -2,14 +2,20 @@
 // EX: 'xyz' & 'zxy' are anagrams
 
 function k(a, b) {
+  a = a.toUpperCase();
+  b = b.toUpperCase();
+  
+  if (a.length != b.length) return false;
+  
   let objA = {}, objB = {};
   
-  for (let i=0; i<arr.length; i++) {
+  for (let i=0; i<a.length; i++) {
+    
     objA[a[i]] = objA[a[i]] ? objA[a[i]] + 1 : 1;
     objB[b[i]] = objB[b[i]] ? objB[b[i]] + 1 : 1;
   }
 
-  for (letkey of objA) {
+  for (let key in objA) {
     if(objA[key] != objB[key]) {
       return false;
     }
@@ -20,5 +26,5 @@ function k(a, b) {
 
 
 
-let res = k('xyz', 'zxy');
+let res = k('xyz', 'ZXy');
 console.log(res);
