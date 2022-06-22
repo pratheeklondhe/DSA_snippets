@@ -19,7 +19,7 @@ function k(n) {
   }
 
   recur(0);
-}
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
 
 let res = k(6);
 console.log(res);
