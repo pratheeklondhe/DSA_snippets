@@ -22,6 +22,8 @@ let s = new Stack();
 
 s.push(10);
 s.push(11);
-// s.push(13);
-console.log(s.peek());
+s.push(13);
+// console.log(s.peek());
+
+module.exports = Stack;
 
