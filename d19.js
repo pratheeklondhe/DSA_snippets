@@ -23,6 +23,11 @@ class LinkedList {
         }
         return count;
   }
+
+  getFirst() {
+        return this.head;
+  }
+  
 }
 
 let ll = new LinkedList();
