@@ -71,6 +71,17 @@ class LinkedList {
             this.insertFirst(data)
         }
     }
+
+  getAt(n) {
+    let node = this.head;
+
+    while(n && node) {
+      node = node.next;
+      n--;
+    }
+
+    return node;
+  }
   
 }
 
