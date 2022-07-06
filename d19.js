@@ -1,11 +1,11 @@
-class Node {
+export class Node {
   constructor(data, next = null) {
     this.data = data;
     this.next = next;
   }
 }
 
-class LinkedList {
+export class LinkedList {
 
   constructor() {
     this.head = null;
@@ -13,7 +13,7 @@ class LinkedList {
 
   insertFirst(data) {
     // this.head = new Node(data, this.head);
-    this.insertAt(0);
+    this.insertAt(data, 0);
   }
 
   size() {
@@ -33,7 +33,7 @@ class LinkedList {
       getLast() {
         let node = this.head;
 
-        while(node?.next) {
+        while(node && node.next) {
             node = node.next;
         }
 
@@ -59,7 +59,7 @@ class LinkedList {
         
         let node = this.head;
 
-        while(node.next?.next) {
+        while(node.next && node.next.next) {
             node = node.next;
         }
 
@@ -89,7 +89,7 @@ class LinkedList {
 
   removeAt(n) {
     if(n === 0) {
-      this.head = this.head?.next;
+      this.head = this.head ? this.head.next : null;
       return;
     }
 
@@ -123,8 +123,12 @@ class LinkedList {
 }
 
 let ll = new LinkedList();
-console.log(ll.head);
-ll.insertFirst('HI');
-console.log(ll);
-ll.insertFirst('HI Hello');
-console.log(ll);
+ll.insertFirst('4');
+ll.insertFirst('3');
+ll.insertFirst('2');
+ll.insertFirst('1');
+ll.insertFirst('0');
+
+
+// module.export.ll = ll;
+// console.log(JSON.stringify(ll));

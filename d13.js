@@ -15,28 +15,28 @@ function spiral(n) {
     x[i] = [];
   }
 
-  let c=1, cs=0,ce=n-1,rs=0,re=n-1;
+  let number=1, cs=0,ce=n-1,rs=0,re=n-1;
 
   while(cs<=ce && rs<=re) {
 
     for(let i=cs; i<=ce; i++) {
-      x[rs][i] = c;
-      c++;
+      x[rs][i] = number;
+      number++;
     }rs++;
 
     for(let i=rs; i<=re; i++) {
-      x[i][ce] = c;
-      c++;
+      x[i][ce] = number;
+      number++;
     }ce--;
 
     for(let i=ce; i>=cs; i--) {
-      x[re][i] = c;
-      c++;
+      x[re][i] = number;
+      number++;
     }re--;
 
     for(let i=re; i>=rs; i--) {
-      x[i][cs] = c;
-      c++;
+      x[i][cs] = number;
+      number++;
     }cs++;
   }
 
