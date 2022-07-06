@@ -104,6 +104,17 @@ class LinkedList {
     if(!node) return;
     node.next = new Node(data, node.next);
   }
+
+    forEach(fn) {
+    let n=0, node = this.head;
+
+    while(node) {
+      
+      fn(node, n);
+      n++;
+      node = node.next;
+    }
+  }
   
 }
 
