@@ -82,6 +82,16 @@ class LinkedList {
 
     return node;
   }
+
+  removeAt(n) {
+    if(n === 0) {
+      this.head = this.head?.next;
+    }
+
+    let node = this.getAt(n-1);
+    if(!node) return;
+    node.next = node.next ? node.next.next : null;
+  }
   
 }
 
