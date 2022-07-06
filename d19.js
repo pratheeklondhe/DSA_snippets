@@ -12,7 +12,8 @@ class LinkedList {
   }
 
   insertFirst(data) {
-    this.head = new Node(data, this.head);
+    // this.head = new Node(data, this.head);
+    this.insertAt(0);
   }
 
   size() {
@@ -25,7 +26,8 @@ class LinkedList {
   }
 
   getFirst() {
-        return this.head;
+    // return this.head;
+    this.getAt(0);
   }
 
       getLast() {
@@ -43,7 +45,9 @@ class LinkedList {
   }
 
   removeFirst() {
-        this.head = this.head?.next;
+    // this.head = this.head?.next;
+    this.removeAt(0);
+        
     }
 
   removeLast() {
