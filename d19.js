@@ -86,11 +86,23 @@ class LinkedList {
   removeAt(n) {
     if(n === 0) {
       this.head = this.head?.next;
+      return;
     }
 
     let node = this.getAt(n-1);
     if(!node) return;
     node.next = node.next ? node.next.next : null;
+  }
+
+  insertAt(data, n) {
+    if(n===0) {
+      this.head = new Node(data, this.head);
+      return;
+    }
+
+    let node = this.getAt(n-1);
+    if(!node) return;
+    node.next = new Node(data, node.next);
   }
   
 }
