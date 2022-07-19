@@ -1,11 +1,11 @@
-export class Node {
+class Node {
   constructor(data, next = null) {
     this.data = data;
     this.next = next;
   }
 }
 
-export class LinkedList {
+class LinkedList {
 
   constructor() {
     this.head = null;
@@ -130,5 +130,5 @@ ll.insertFirst('1');
 ll.insertFirst('0');
 
 
-// module.export.ll = ll;
+module.exports = ll;
 // console.log(JSON.stringify(ll));
