@@ -46,19 +46,21 @@ class Tree {
 }
 
 const tree = new Tree('N1');
+
 tree.root.addChildren('N2')
 .addChildren('N3').addChildren('N4');
 
 tree.root.children[0].addChildren('N5')
 .addChildren('N6');
 
-tree.root.children[2].addChildren('N7')
-  .addChildren('N8').addChildren('N9').addChildren('N10')
+tree.root.children[2].addChildren('N7') .addChildren('N8').addChildren('N9').addChildren('N10')
 
-tree.traverseBF((node) => {
-  console.log(node.data);
-});
+// tree.traverseBF((node) => {
+//   console.log(node.data);
+// });
 
-tree.traverseDF((node) => {
-  console.log(node.data);
-});
+// tree.traverseDF((node) => {
+//   console.log(node.data);
+// });
+
+module.exports = tree;
